@@ -358,6 +358,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-service.crosshatch
 
+# RCS
+PRODUCT_PACKAGES += \
+    PresencePolling \
+    RcsService
+
 # Storage health HAL
 PRODUCT_PACKAGES += \
     android.hardware.health.storage@1.0-service
