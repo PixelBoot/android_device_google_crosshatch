@@ -101,6 +101,14 @@ AB_OTA_PARTITIONS += \
     vbmeta_system
 endif
 
+# Partitions
+AB_OTA_PARTITIONS += \
+    vendor
+ifneq ($(PRODUCT_USE_DYNAMIC_PARTITIONS), true)
+    BOARD_VENDORIMAGE_PARTITION_SIZE := 805306368
+endif
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+
 # Partitions (listed in the file) to be wiped under recovery.
 TARGET_RECOVERY_WIPE := device/google/crosshatch/recovery.wipe
 ifneq ($(filter %_mainline,$(TARGET_PRODUCT)),)
