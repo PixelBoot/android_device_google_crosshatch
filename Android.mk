@@ -30,7 +30,7 @@ $(eval $(call declare-copy-files-license-metadata,device/google/crosshatch,p2p_s
 $(eval $(call declare-copy-files-license-metadata,device/google/crosshatch,wpa_supplicant.conf,SPDX-license-identifier-Apache-2.0,notice,build/soong/licenses/LICENSE,))
 $(eval $(call declare-copy-files-license-metadata,device/google/crosshatch,wpa_supplicant_overlay.conf,SPDX-license-identifier-Apache-2.0,notice,build/soong/licenses/LICENSE,))
 
-$(eval $(call declare-1p-copy-files,device/google/crosshatch,audio_policy_configuration.xml))
+$(eval $(call declare-1p-copy-files,device/google/crosshatch/audio/xml,audio_policy_configuration.xml))
 
 ifeq ($(USES_DEVICE_GOOGLE_B1C1),true)
   subdir_makefiles=$(call first-makefiles-under,$(LOCAL_PATH))
